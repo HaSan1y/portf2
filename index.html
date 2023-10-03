@@ -607,18 +607,21 @@
                     </div>
                 </div>
                 <div class="right-contact">
-                    <form action="mailto:hasan.yildirim@outlook.com" class="contact-form">
+                    <form action="https://formspree.io/f/mnqkobzd" method="POST" class="contact-form">
                         <div class="input-control ic2">
-                            <input type="text" required placeholder="YOUR NAME">
-                            <input type="text" required placeholder="YOUR EMAIL">
+                            <label>Your Name:<input type="text" required placeholder="YOUR NAME" name="name"></label>
+                            <label>Your Email:<input type="email" required placeholder="YOUR EMAIL"
+                                    name="email"></label>
                         </div>
                         <div class="input-control">
-                            <input type="text" required placeholder="ENTER SUBJECT">
+                            <label><input type="text" required placeholder="ENTER SUBJECT" name="subj"></label>
                         </div>
                         <div class="input-control">
-                            <textarea name="" id="" cols="8" rows="8" placeholder="MESSAGE HERE..."></textarea>
+                            <label>Your Message: <textarea id="" cols="8" rows="8" placeholder="MESSAGE HERE..."
+                                    name="message"></textarea></label>
                         </div>
                         <button class="sub-btn" id='submit' type='submit'><span class="btn-text">Submit</span></button>
+
                         <div class="submit-btn">
                             <a href="#" class="main-btn" onclick="window.open('./online2023.pdf')">
                                 <span class="btn-text">Download CV</span>
