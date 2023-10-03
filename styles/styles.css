@@ -65,7 +65,6 @@ section {
   padding: 2rem 18rem;
 }
 
-/**/
 .section {
   transform: translateY(-10%) scale(0);
   transform: translateX(-1%);
@@ -446,7 +445,6 @@ section {
   color: var(--color-gray2);
 }
 
-/*www.youtube.com/watch?v=xV7S8BhIeBo */
 .port-text {
   padding: 2rem 0;
   text-align: center;

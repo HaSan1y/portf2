@@ -1,4 +1,4 @@
-//main edit on .scss,sass will auto-save-update into .css
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   list-style: none;
 }
 :root {
-  //adding callable bg color
+
   --color-primary: #191d2b;
   --color-secondary: #27ae60;
   --color-white: #ffffff;
@@ -38,8 +38,8 @@
 body {
   background-color: var(--color-primary);
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.1rem; 
-  //color:var(--color-white);//?
+  font-size: 1.1rem;
+
   transition: all 0.4s ease-in-out;
 }
 
@@ -50,8 +50,8 @@ a {
   font-family: inherit;
 }
 header {
-  height: 100vh; //put text 100vh down from top
-  color: var(--color-black); //pagetext fontcolor
+  height: 100vh;
+  color: var(--color-black);
   overflow: hidden; // hide scrollbar
 }
 
@@ -61,12 +61,11 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -1; 
-  padding: 2rem 18rem; //this and min-height is cause for transition from up to down
+  z-index: -1;
+  padding: 2rem 18rem;
 }
-/**/
+
 .section {
-  //??not used ?
   transform: translateY(-10%) scale(0);
   transform: translateX(-1%);
   transition: all 0.4s ease-in-out;
@@ -107,43 +106,43 @@ section {
   }
 }
 
-//controlls icon-radius, pointer..
+//controlls
 .controlls {
-  //globally icon group
-  position: fixed; //let icons stay-be on right side
-  z-index: 1; //icons layer above transupdwn, -1= icons behind the transition which goes from top to down
+
+  position: fixed;
+  z-index: 1;
   top: 20%; //icons y pos
   right: 3%; //icons x pos
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; //let icons align, up to down
-  transform: translateY(-10%); //also icon y pos?
+  flex-direction: column;
+  transform: translateY(-10%);
   .active-btn {
     background-color: var(
       --color-secondary
     ) !important; //it doesnt do it without !important!
     transition: all 0.4s ease-in-out; // speed of being-getting 'active'
     i {
-      color: var(--color-white) !important; //transperence zoom inof icon?
+      color: var(--color-white) !important;
     }
   }
   .control {
     // icon typ1
     padding: 1rem; //border of icons, 1rem! is min
-    cursor: pointer; //pointer curser when hover over icon
-    background-color: var(--color-gray4); //graywhite-bg of icons
-    width: 55px; //icons wides
-    height: 55px; //icons heights
+    cursor: pointer;
+    background-color: var(--color-gray4);
+    width: 55px;
+    height: 55px;
     border-radius: 50%; //makes icons round
-    display: flex; //some weird innericons movement can be done here upleft
-    justify-content: center; //some weird innericons movement can be done here leftmiddle
-    align-items: center; //some weird innericons movement can be done here upmiddle
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0.2rem 0; //space under icons inbetween,for reasons can put 2 numbers
     box-shadow: var(--box-shadow1); //?
     i {
       font-size: 0.9rem; //icons resize them
-      color: var(--color-gray2); //icon color
+      color: var(--color-gray2);
       pointer-events: none; //dont do anything on click
     }
   }
@@ -173,39 +172,39 @@ section {
   }
 }
 
-//headernontent
+
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr); //splitt body into 2 colums-squares
   height: 100%;
   .left-header {
-    //left header undefined?
+
     display: flex;
     align-items: center;
-    position: relative; //resize image?
+    position: relative; 
     .h-shape {
-      //adjust your green border here
+
       transition: all 0.4s ease-in-out;
       width: 40%;
-      height: 100%; //green border shape lenght
+      height: 100%;
       background-color: var(--color-secondary);
       position: absolute;
       left: 0;
       top: 0;
-      z-index: -1; //-1= up dwn trans takes abit from image
+      z-index: -1;
       clip-path: polygon(
         0 0,
         46% 0,
         79% 100%,
         0% 100%
-      ); //search clippath generator on google for shapes you can past here in
+      ); 
     }
     .image {
-      //adjust your .png color etc here
-      border-radius: var(--br-sm-2); //(missing border radius mod 2)
-      width: 38%; //crop wideize of png
+
+      border-radius: var(--br-sm-2);
+      width: 38%;
       height: 90%;
-      margin-left: 3rem; //left greenborder marging from png
+      margin-left: 3rem;
       background-color: var(--color-black);
       transition: all 0.1s ease-in-out;
       img {
@@ -213,7 +212,7 @@ section {
         height: 100%;
         object-fit: cover;
         transition: all 0.1s ease-in-out;
-        filter: grayscale(100%); //until mouse is on png shit is gray png
+        filter: grayscale(100%);
         &:hover {
           filter: grayscale(0);
         }
@@ -243,7 +242,7 @@ section {
 .about-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-top: 3.5rem; //how much under about me stats you want the text
+  padding-top: 3.5rem;
   padding-bottom: 5rem;
   .right-about {
     display: grid;
@@ -458,8 +457,7 @@ section {
     }
   }
 }
-/*www.youtube.com/watch?v=xV7S8BhIeBo */
-//portfoilios//for some reason live update stopped working i had to close the browser-tab, and open htmlfile with life server from visual studio code here! to see real changes!!
+
 .port-text {
   padding: 2rem 0;
   text-align: center;
@@ -471,16 +469,16 @@ section {
   margin-top: 3rem;
   .portfolio-item {
     position: relative;
-    border-radius: 15px; //
+    border-radius: 15px;
     img {
       image-rendering: auto;
-image-rendering: crisp-edges;
-image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      image-rendering: pixelated;
       width: 100%;
       height: 300px;
       object-fit: cover;
       border-radius: 15px;
-      object-position:center;
+      object-position: center;
     }
     .hover-items {
       width: 100%;
@@ -494,7 +492,7 @@ image-rendering: pixelated;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      opacity: 0; //make it invisible until :hover calledvv
+      opacity: 0;
       transform: scale(0);
       transition: all 0.4s ease-in-out;
       h3 {
@@ -503,7 +501,7 @@ image-rendering: pixelated;
         margin-bottom: 1.5rem;
       }
       .icons {
-        display: flex; //put blocks align =//flexboxes
+        display: flex; 
         justify-content: center;
         align-items: center;
         .icon {
@@ -538,8 +536,6 @@ image-rendering: pixelated;
   transform: scale(1); //greenthing=1wholeimg 1+overwholehtml -1upsidedwn
 }
 
-//.asdf > * { >*means do the things to all children 'div',from asdfparentclass div
-
 //blog section
 .blogs {
   display: grid;
@@ -548,12 +544,11 @@ image-rendering: pixelated;
   margin-top: 3rem; //how much space from myblog to blogimgbg
   .blog {
     position: relative;
-    background-color: var(--color-gray5); //how gray you want down blogbg to be
+    background-color: var(--color-gray5);
     border-radius: 5px; //how much roundness you want under your blog text
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease-in-out;
     &:hover {
-      //lost hours until i realiced must be :hover and not .hover
       box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
       transform: translateY(
         -5px
@@ -700,7 +695,7 @@ image-rendering: pixelated;
 
 //independet content
 .btn-con {
-  //make download cv button not like lenght of parent h1textdivlength but shorter
+
   display: flex;
   align-self: flex-start;
 }
@@ -720,16 +715,15 @@ image-rendering: pixelated;
     padding: 0.5rem 3rem;
   }
   &:hover {
-      background-color: var(--color-gray2);
-      transition: all 0.4s ease-out;
-
+    background-color: var(--color-gray2);
+    transition: all 0.4s ease-out;
   }
 }
 .main-btn {
   border-radius: 30px;
   color: inherit;
-  font-weight: 600; //?
-  position: relative; //only btn gets animation without this whole site would
+  font-weight: 600;
+  position: relative;
   border: 1px solid var(--color-secondary);
   display: flex;
   align-self: flex-start;
