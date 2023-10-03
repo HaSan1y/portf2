@@ -672,9 +672,10 @@ section {
   display: flex;
 }
 .contact-content-con .right-contact .ic2 :last-child {
-  margin-left: 1.5rem;
+  margin-left: 0.1rem;
 }
 .contact-content-con .right-contact .submit-btn {
+  margin: 4rem 0 0 0;
   display: flex;
   justify-content: flex-start;
 }

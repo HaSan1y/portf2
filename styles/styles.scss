@@ -687,10 +687,11 @@ image-rendering: pixelated;
     .ic2 {
       display: flex;
       :last-child {
-        margin-left: 1.5rem;
+        margin-left: 0.1rem;
       }
     }
     .submit-btn {
+      margin: 4rem 0 0 0;
       display: flex;
       justify-content: flex-start;
     }
