@@ -1,8 +1,8 @@
 Portfolio.png
-styles/styles.css.map
 styles/styles.scss
-styles/
-!styles/styles.css
+/styles/styles.css.map
+
+# !styles/styles.css
 
 
 # echo "styles/styles.scss" >> .gitignore

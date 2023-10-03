@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,6 @@
   list-style: none;
 }
 :root {
-
   --color-primary: #191d2b;
   --color-secondary: #27ae60;
   --color-white: #ffffff;
@@ -98,7 +96,7 @@ section {
   animation: scaleAnim 1s ease-in-out;
   @keyframes scaleAnim {
     0% {
-      transform: translateY(-100%) scaleY(0);
+      transform: translateY(-99%) scaleY(0);
     }
     100% {
       transform: translateY(0) scaleY(1);
@@ -108,7 +106,6 @@ section {
 
 //controlls
 .controlls {
-
   position: fixed;
   z-index: 1;
   top: 20%; //icons y pos
@@ -172,18 +169,15 @@ section {
   }
 }
 
-
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr); //splitt body into 2 colums-squares
   height: 100%;
   .left-header {
-
     display: flex;
     align-items: center;
-    position: relative; 
+    position: relative;
     .h-shape {
-
       transition: all 0.4s ease-in-out;
       width: 40%;
       height: 100%;
@@ -192,15 +186,9 @@ section {
       left: 0;
       top: 0;
       z-index: -1;
-      clip-path: polygon(
-        0 0,
-        46% 0,
-        79% 100%,
-        0% 100%
-      ); 
+      clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
     }
     .image {
-
       border-radius: var(--br-sm-2);
       width: 38%;
       height: 90%;
@@ -501,7 +489,7 @@ section {
         margin-bottom: 1.5rem;
       }
       .icons {
-        display: flex; 
+        display: flex;
         justify-content: center;
         align-items: center;
         .icon {
@@ -695,7 +683,6 @@ section {
 
 //independet content
 .btn-con {
-
   display: flex;
   align-self: flex-start;
 }
