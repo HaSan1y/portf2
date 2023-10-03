@@ -36,9 +36,9 @@
 }
 
 body {
-  background-color: var(--color-primary); //basicly htmlbg color
+  background-color: var(--color-primary);
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.1rem; //pagetextfontsize
+  font-size: 1.1rem; 
   //color:var(--color-white);//?
   transition: all 0.4s ease-in-out;
 }
@@ -61,7 +61,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -1; //takes only green margin apart not png
+  z-index: -1; 
   padding: 2rem 18rem; //this and min-height is cause for transition from up to down
 }
 /**/
@@ -107,16 +107,16 @@ section {
   }
 }
 
-//controlls icon radius pointer etc
+//controlls icon-radius, pointer..
 .controlls {
   //globally icon group
   position: fixed; //let icons stay-be on right side
   z-index: 1; //icons layer above transupdwn, -1= icons behind the transition which goes from top to down
   top: 20%; //icons y pos
   right: 3%; //icons x pos
-  display: flex; //some weird innericons movement can be done here upleft
-  justify-content: center; //?
-  align-items: center; //middleborder captured icons
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column; //let icons align, up to down
   transform: translateY(-10%); //also icon y pos?
   .active-btn {
