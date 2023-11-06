@@ -6,16 +6,16 @@
 }
 
 :root {
-  --color-primary: #191d2b;
+  --color-primary: #313953;
   --color-secondary: #27ae60;
   --color-white: #ffffff;
-  --color-black: #000;
+  --color-black: #141313;
   --color-gray0: #f8f8f8;
   --color-gray1: #dbe1e8;
   --color-gray2: #b2becd;
   --color-gray3: #6c7983;
   --color-gray4: #454e56;
-  --color-gray5: #2a2e35;
+  --color-gray5: #333841;
   --color-gray6: #12181b;
   --br-sm-2: 14px;
   --box-shadow1: 0 3px 15px rgba(0, 0, 0, 0.2);
@@ -23,7 +23,7 @@
 
 .light-mode {
   --color-primary: #b9bfd8;
-  --color-secondary: #4446be;
+  --color-secondary: #9d9ee0;
   --color-white: #e64343;
   --color-black: rgb(255, 255, 255);
   --color-gray0: #6e2e2e;
@@ -53,6 +53,11 @@ header {
   min-height: 100vh;
   color: var(--color-black);
   overflow: hidden;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 section {
@@ -656,15 +661,18 @@ section {
 .contact-content-con .right-contact .input-control textarea {
   border-radius: 30px;
   font-weight: inherit;
-  font-size: inherit;
+  font-size: 0.9rem;
   font-family: inherit;
   padding: 0.8rem 1.1rem;
   outline: none;
   border: none;
   background-color: var(--color-gray5);
-  width: 100%;
+  width: 95%;
   color: var(--color-white);
   resize: none;
+}
+.contact-content-con .right-contact .input-control textarea {
+  width: 250%;
 }
 .contact-content-con .right-contact .ic2 {
   display: flex;
@@ -675,7 +683,7 @@ section {
 .contact-content-con .right-contact .submit-btn {
   margin: 4rem 0 0 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
 }
 
 .btn-con {
@@ -691,10 +699,9 @@ section {
   background-color: var(--color-gray4);
   border: 1px solid var(--color-secondary);
   display: flex;
-  float: right;
-  align-items: center;
+  justify-content: space-around;
   overflow: hidden;
-  width: 200px;
+  width: 100px;
 }
 .sub-btn .btn-text {
   padding: 0.5rem 3rem;
