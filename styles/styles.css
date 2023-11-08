@@ -849,7 +849,7 @@ section {
     grid-template-columns: 1fr 1fr;
   }
   .main-title h2 {
-    font-style: 4rem;
+    font-size: 4rem;
   }
   .main-title h2 span {
     font-size: 4rem;
