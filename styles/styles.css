@@ -7,7 +7,7 @@
 
 :root {
   --color-primary: #313953;
-  --color-secondary: #27ae60;
+  --color-secondary: hsl(145, 63%, 42%);
   --color-white: #ffffff;
   --color-black: #141313;
   --color-gray0: #f8f8f8;
@@ -190,7 +190,7 @@ section {
   transition: all 0.4s ease-in-out;
   width: 40%;
   height: 100%;
-  background-color: var(--color-secondary);
+  background-color: hsla(145, 63%, 42%, 0.5);
   position: absolute;
   left: 0;
   top: 0;
@@ -304,6 +304,8 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 40px;
 }
 .about-stats .progress-bars .progress-bar {
   display: flex;
@@ -464,6 +466,7 @@ section {
 .portfolios .portfolio-item {
   position: relative;
   border-radius: 15px;
+  box-shadow: 5px 5px 5px 0;
 }
 .portfolios .portfolio-item img {
   image-rendering: auto;
@@ -590,7 +593,7 @@ section {
   padding-top: 3.5rem;
 }
 .contact-content-con .left-contact {
-  flex: 2;
+  margin: 0 20px;
 }
 .contact-content-con .left-contact h4 {
   margin-top: 1rem;
@@ -651,15 +654,18 @@ section {
   font-size: 1.3rem;
 }
 .contact-content-con .right-contact {
-  flex: 3;
+  box-shadow: 0 0 5px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
   margin-left: 3rem;
 }
 .contact-content-con .right-contact .input-control {
-  margin: 1.5rem 0;
+  margin: 20px 40px;
 }
 .contact-content-con .right-contact .input-control input,
 .contact-content-con .right-contact .input-control textarea {
-  border-radius: 30px;
+  margin: 5px 0 0 0;
+  border-radius: 10px;
   font-weight: inherit;
   font-size: 0.9rem;
   font-family: inherit;
@@ -667,21 +673,13 @@ section {
   outline: none;
   border: none;
   background-color: var(--color-gray5);
-  width: 95%;
   color: var(--color-white);
   resize: none;
 }
 .contact-content-con .right-contact .input-control textarea {
-  width: 250%;
-}
-.contact-content-con .right-contact .ic2 {
-  display: flex;
-}
-.contact-content-con .right-contact .ic2 :last-child {
-  margin-left: 0.1rem;
+  width: 100%;
 }
 .contact-content-con .right-contact .submit-btn {
-  margin: 4rem 0 0 0;
   display: flex;
   justify-content: space-around;
 }
@@ -696,7 +694,8 @@ section {
   color: inherit;
   font-weight: 600;
   position: relative;
-  background-color: var(--color-gray4);
+  margin: 0 0 0 40px;
+  background-color: var(--color-gray2);
   border: 1px solid var(--color-secondary);
   display: flex;
   justify-content: space-around;
@@ -707,7 +706,7 @@ section {
   padding: 0.5rem 3rem;
 }
 .sub-btn:hover {
-  background-color: var(--color-gray2);
+  background-color: var(--color-gray4);
   transition: all 0.4s ease-out;
 }
 
@@ -719,6 +718,7 @@ section {
   border: 1px solid var(--color-secondary);
   display: flex;
   align-self: flex-start;
+  margin: 0 0 40px 0;
   align-items: center;
   overflow: hidden;
 }
@@ -758,6 +758,7 @@ section {
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
+  margin-bottom: 100px 0;
 }
 .main-title h2 span {
   color: var(--color-secondary);
@@ -774,43 +775,29 @@ section {
   font-size: 6.3rem;
 }
 
-@media screen and (max-width: 600px) {
-  .about-container {
-    grid-template-columns: 1fr;
+#na {
+  text-shadow: black 5px 1px;
+}
+
+#blink {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
   }
-  .about-container .right-about {
-    grid-template-columns: 1fr;
-    padding-top: 2.5rem;
+  50% {
+    opacity: 0.25;
   }
-  .about-container .left-about {
-    padding-right: 0;
+  50% {
+    opacity: 0.5;
   }
-  .about-container .left-about p {
-    padding-left: 0;
+  50% {
+    opacity: 0.75;
   }
-  .timeline {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .portfolios {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .blogs {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .section {
-    padding: 2rem 2.5rem !important;
-  }
-  .main-title h2 {
-    font-size: 2rem;
-  }
-  .main-title h2 span {
-    font-size: 2.5rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 3rem;
+  100% {
+    opacity: 1;
   }
 }
 @media screen and (max-width: 1432px) {
@@ -834,6 +821,9 @@ section {
     margin-left: 0;
     margin-top: 1.5rem;
   }
+  textarea {
+    width: 200% !important;
+  }
 }
 @media screen and (max-width: 1070px) {
   .about-container {
@@ -855,7 +845,10 @@ section {
     font-size: 4rem;
   }
   .main-title h2 .bg-text {
-    font-size: 4.5rem;
+    font-size: 3rem;
+  }
+  textarea {
+    width: 200% !important;
   }
 }
 @media screen and (max-width: 970px) {
@@ -904,8 +897,6 @@ section {
   .section {
     padding: 7rem 6rem;
   }
-}
-@media screen and (max-width: 970px) {
   .section {
     padding: 7rem 3rem;
   }
@@ -919,6 +910,51 @@ section {
     font-size: 3rem;
   }
   .main-title h2 .bg-text {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+  textarea {
+    width: 200% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about {
+    grid-template-columns: 1fr;
+    padding-top: 2.5rem;
+  }
+  .about-container .left-about {
+    padding-right: 0;
+  }
+  .about-container .left-about p {
+    padding-left: 0;
+  }
+  textarea {
+    width: 100% !important;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .portfolios {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .blogs {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .section {
+    padding: 2rem 2.5rem !important;
+  }
+  .main-title h2 {
+    font-size: 2rem;
+  }
+  .main-title h2 span {
+    font-size: 2.5rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=styles.css.map */
