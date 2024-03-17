@@ -12,7 +12,7 @@
   --color-white: #ffffff;
   --color-black: #141313;
   --color-gray0: #f8f8f8;
-  --color-gray1: #dbe1e8;
+  --color-gray1: #928585;
   --color-gray2: #b2becd;
   --color-gray3: #6c7983;
   --color-gray4: #454e56;
@@ -28,7 +28,7 @@
   --color-white: #e64343;
   --color-black: rgb(255, 255, 255);
   --color-gray0: #6e2e2e;
-  --color-gray1: #dbe1e8;
+  --color-gray1: #7bace6;
   --color-gray2: #8b4851;
   --color-gray3: #5e7485;
   --color-gray4: #7cabd4;
@@ -296,6 +296,7 @@ section {
 .about-container .left-about h4 {
   font-size: 2rem;
   text-transform: uppercase;
+  color: var(--color-gray4);
 }
 
 .about-stats {
@@ -307,6 +308,7 @@ section {
   grid-gap: 2rem;
   background-color: rgba(0, 0, 0, 0.05);
   padding: 40px;
+  box-shadow: 0 0 20px 5px rgb(255, 255, 255);
 }
 .about-stats .progress-bars .progress-bar {
   display: flex;
@@ -661,7 +663,8 @@ section {
   margin-left: 3rem;
 }
 .contact-content-con .right-contact .input-control {
-  margin: 20px 40px;
+  padding: 40px 0 0 20px;
+  margin: 0 0 0 20px;
 }
 .contact-content-con .right-contact .input-control input,
 .contact-content-con .right-contact .input-control textarea {
@@ -695,7 +698,7 @@ section {
   color: inherit;
   font-weight: 600;
   position: relative;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 700px;
   background-color: var(--color-gray2);
   border: 1px solid var(--color-secondary);
   display: flex;
@@ -801,6 +804,10 @@ section {
     opacity: 1;
   }
 }
+.k {
+  height: 300px;
+}
+
 @media screen and (max-width: 1432px) {
   header {
     padding: 0 !important;
