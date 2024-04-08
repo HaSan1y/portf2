@@ -674,14 +674,22 @@ section {
   font-size: 0.9rem;
   font-family: inherit;
   padding: 0.8rem 1.1rem;
-  outline: none;
-  border: none;
   background-color: var(--color-gray5);
   color: var(--color-white);
-  resize: none;
+  resize: vertical;
+  max-height: 130px;
+  max-width: 500px;
 }
-.contact-content-con .right-contact .input-control textarea {
-  width: 100%;
+.contact-content-con .right-contact .input-control input:valid, .contact-content-con .right-contact .input-control textarea:valid {
+  border: 2px solid lime;
+}
+.contact-content-con .right-contact .input-control input:invalid, .contact-content-con .right-contact .input-control textarea:invalid {
+  border: 2px dashed red;
+}
+.contact-content-con .right-contact .input-control textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 .contact-content-con .right-contact .submit-btn {
   display: flex;
@@ -698,7 +706,7 @@ section {
   color: inherit;
   font-weight: 600;
   position: relative;
-  margin: 0 0 0 700px;
+  margin: 0 auto 20px auto;
   background-color: var(--color-gray2);
   border: 1px solid var(--color-secondary);
   display: flex;
@@ -829,9 +837,6 @@ section {
     margin-left: 0;
     margin-top: 1.5rem;
   }
-  textarea {
-    width: 200% !important;
-  }
 }
 @media screen and (max-width: 1070px) {
   .about-container {
@@ -854,9 +859,6 @@ section {
   }
   .main-title h2 .bg-text {
     font-size: 3rem;
-  }
-  textarea {
-    width: 200% !important;
   }
 }
 @media screen and (max-width: 970px) {
@@ -920,9 +922,6 @@ section {
   .main-title h2 .bg-text {
     font-size: 3rem;
   }
-  textarea {
-    width: 200% !important;
-  }
 }
 @media screen and (max-width: 600px) {
   .about-container {
@@ -937,9 +936,6 @@ section {
   }
   .about-container .left-about p {
     padding-left: 0;
-  }
-  textarea {
-    width: 100% !important;
   }
   .timeline {
     grid-template-columns: 1fr;
