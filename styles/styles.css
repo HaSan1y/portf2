@@ -819,9 +819,10 @@ section {
   text-shadow: var(--color-gray5) 105px 100px;
 }
 
-.earn {
-  -moz-columns: 5;
-       columns: 5;
+.earn,
+.curve {
+  -moz-columns: 4;
+       columns: 4;
 }
 
 #blink {
@@ -892,6 +893,11 @@ section {
   }
   .main-title h2 .bg-text {
     font-size: 3rem;
+  }
+  .earn,
+  .curve {
+    -moz-columns: 3;
+         columns: 3;
   }
 }
 @media screen and (max-width: 970px) {
@@ -969,6 +975,11 @@ section {
   }
   .about-container .left-about p {
     padding-left: 0;
+  }
+  .earn,
+  .curve {
+    -moz-columns: 2;
+         columns: 2;
   }
   .timeline {
     grid-template-columns: 1fr;
