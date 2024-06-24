@@ -6,8 +6,7 @@
 }
 
 :root {
-  --color-primary: radial-gradient(ellipse at top, #313953, transparent),
-   radial-gradient(ellipse at bottom, rgb(26, 27, 26), transparent);
+  --color-primary: radial-gradient(ellipse at top, #313953, transparent), radial-gradient(ellipse at bottom, rgb(26, 27, 26), transparent);
   --color-secondary: hsl(145, 63%, 42%);
   --color-white: #ffffff;
   --color-black: #141313;
@@ -618,6 +617,7 @@ section {
 .contact-content-con {
   display: flex;
   padding-top: 3.5rem;
+  justify-content: space-between;
 }
 .contact-content-con .left-contact {
   margin: 0 20px;
@@ -706,10 +706,12 @@ section {
   max-height: 130px;
   max-width: 500px;
 }
-.contact-content-con .right-contact .input-control input:valid, .contact-content-con .right-contact .input-control textarea:valid {
+.contact-content-con .right-contact .input-control input:valid,
+.contact-content-con .right-contact .input-control textarea:valid {
   border: 2px solid lime;
 }
-.contact-content-con .right-contact .input-control input:invalid, .contact-content-con .right-contact .input-control textarea:invalid {
+.contact-content-con .right-contact .input-control input:invalid,
+.contact-content-con .right-contact .input-control textarea:invalid {
   border: 2px dashed red;
 }
 .contact-content-con .right-contact .input-control textarea:focus {
@@ -815,6 +817,11 @@ section {
 
 .na {
   text-shadow: var(--color-gray5) 105px 100px;
+}
+
+.earn {
+  -moz-columns: 5;
+       columns: 5;
 }
 
 #blink {
