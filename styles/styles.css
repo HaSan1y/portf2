@@ -248,6 +248,16 @@ section {
   padding-right: 18rem;
 }
 .header-content .right-header .name {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  word-spacing: -3.6px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: oblique;
+  font-variant: small-caps;
+  text-transform: none;
   font-size: 2rem;
 }
 .header-content .right-header .name span {
@@ -256,6 +266,58 @@ section {
 .header-content .right-header p {
   margin: 1.5rem 0;
   line-height: 2rem;
+}
+
+table.paleBlueRows {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #ffffff;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table.paleBlueRows td,
+table.paleBlueRows th {
+  border: 1px solid #ffffff;
+  padding: 3px 2px;
+}
+
+table.paleBlueRows tbody td {
+  font-size: 13px;
+}
+
+table.paleBlueRows tr:nth-child(even) {
+  background: #d0e4f5;
+}
+
+table.paleBlueRows thead {
+  background: #0b6fa4;
+  border-bottom: 5px solid #ffffff;
+}
+
+table.paleBlueRows thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  border-left: 2px solid #ffffff;
+}
+
+table.paleBlueRows thead th:first-child {
+  border-left: none;
+}
+
+table.paleBlueRows tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background: #d0e4f5;
+  border-top: 3px solid #444444;
+}
+
+table.paleBlueRows tfoot td {
+  font-size: 14px;
 }
 
 .about-container {
@@ -815,13 +877,17 @@ section {
   font-size: 6.3rem;
 }
 
-.na {
-  text-shadow: var(--color-gray5) 105px 100px;
+#na {
+  text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5, 22px -27px 12px rgba(206, 89, 55, 0.93);
 }
 
 table {
-  display: table-row-group;
+  position: absolute;
+  left: 100px;
+  top: 350px;
   padding: 10px;
+  margin: 0;
+  overflow: auto;
 }
 
 .earn {
@@ -838,11 +904,13 @@ table {
   animation: blink 1s linear infinite;
 }
 
-th {
+td {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   padding: 5px;
+  background-color: red;
+  padding: 10px;
 }
 
 @keyframes blink {
