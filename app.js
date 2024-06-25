@@ -6,22 +6,19 @@ const allsections = document.querySelector(".main-content");
 function PageTransitions() {
 	for (let i = 0; i < sectBtn.length; i++) {
 		sectBtn[i].addEventListener("click", function () {
-			let currentBtn = document.querySelectorAll(".active-btn");
-			currentBtn[0].className = currentBtn[0].className.replace(
-				"active-btn",
-				"control", //
-			);
+			let currentBtn = document.querySelector(".active-btn");
+			currentBtn.className = currentBtn.className.replace("active-btn", "");
 			this.className += " active-btn";
 		});
 	}
 
-	allsections.addEventListener("click", (eu) => {
-		const ido = eu.target.dataset.id;
+	allsections.addEventListener("click", (e) => {
+		const ido = e.target.dataset.id;
 		if (ido) {
 			sectBtn.forEach((btn) => {
 				btn.classList.remove("active");
 			});
-			eu.target.classList.add("active");
+			e.target.classList.add("active");
 
 			sections.forEach((section) => {
 				section.classList.remove("active");
