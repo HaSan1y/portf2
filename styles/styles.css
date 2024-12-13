@@ -802,9 +802,9 @@ table.paleBlueRows tfoot td {
   display: flex;
   justify-content: space-around;
   overflow: hidden;
-  width: 100px;
 }
 .sub-btn .btn-text {
+  display: flex;
   padding: 0.5rem 3rem;
   text-align: center;
 }
@@ -831,6 +831,9 @@ table.paleBlueRows tfoot td {
   overflow: hidden;
 }
 .main-btn .btn-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
   padding: 0 2rem;
 }
 .main-btn .btn-icon {
