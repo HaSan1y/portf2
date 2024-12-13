@@ -25,7 +25,7 @@
   --color-primary: #b9bfd8;
   --color-secondary: #9d9ee0;
   --color-white: #e64343;
-  --color-black: rgb(255, 255, 255);
+  --color-black: rgb(41, 41, 41);
   --color-gray0: #6e2e2e;
   --color-gray1: #7bace6;
   --color-gray2: #8b4851;
@@ -806,10 +806,16 @@ table.paleBlueRows tfoot td {
 }
 .sub-btn .btn-text {
   padding: 0.5rem 3rem;
+  text-align: center;
 }
 .sub-btn:hover {
   background: var(--color-gray4);
   transition: all 0.4s ease-out;
+}
+
+.show-storage-access {
+  position: absolute;
+  bottom: 0;
 }
 
 .main-btn {
