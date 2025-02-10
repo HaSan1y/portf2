@@ -1,9 +1,8 @@
-const sections = document.querySelectorAll(".section");
-const sectBtns = document.querySelectorAll(".controlls");
-const sectBtn = document.querySelectorAll(".control");
-const allsections = document.querySelector(".main-content");
-
 function PageTransitions() {
+	const sections = document.querySelectorAll(".section");
+	const sectBtns = document.querySelectorAll(".controlls");
+	const sectBtn = document.querySelectorAll(".control");
+	const allsections = document.querySelector(".main-content");
 	for (let i = 0; i < sectBtn.length; i++) {
 		sectBtn[i].addEventListener("click", function () {
 			let currentBtn = document.querySelector(".active-btn");
@@ -35,3 +34,9 @@ function PageTransitions() {
 }
 
 PageTransitions();
+
+// pdf link csp secure
+document.getElementById("pdfLink").addEventListener("click", function (e) {
+	e.preventDefault();
+	window.open("./online2023.pdf");
+});
