@@ -126,6 +126,11 @@ section {
   transform: translateY(0) scale(1);
 }
 
+.sec7.active {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .active {
   display: block;
   animation: scaleAnim 1s ease-in-out;
@@ -177,6 +182,10 @@ section {
 }
 
 .theme-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   top: 5%;
   right: 3%;
   width: 70px;
@@ -184,10 +193,6 @@ section {
   border-radius: 50%;
   background: var(--color-gray4);
   cursor: pointer;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in-out;
 }
@@ -269,34 +274,43 @@ section {
 }
 
 .table-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 50px;
-  top: 300px;
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
   margin: auto;
   overflow: auto;
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
-  border: 1px solid var(--color-gray5);
+  font-family: "roboto", Times, serif;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+
+caption {
+  text-align: left;
+  text-shadow: #007bff;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
 }
 
 th,
 td {
-  padding: 1rem;
   text-align: left;
   border: 1px solid var(--color-gray5);
 }
 
 th {
-  background-color: var(--color-gray4);
+  background-color: hsl(0, 0%, 0%);
   color: var(--color-white);
 }
 
@@ -315,18 +329,8 @@ table a {
   font-weight: bolder;
 }
 
-table.paleBlueRows {
-  font-family: "Times New Roman", Times, serif;
-  border: 1px solid #ffffff;
-  width: 350px;
-  height: 200px;
-  text-align: center;
-  border-collapse: collapse;
-}
-
 table.paleBlueRows td,
 table.paleBlueRows th {
-  border: 1px solid #ffffff;
   padding: 3px 2px;
 }
 
@@ -334,13 +338,8 @@ table.paleBlueRows tbody td {
   font-size: 13px;
 }
 
-table.paleBlueRows tr:nth-child(even) {
-  background: #d0e4f5;
-}
-
 table.paleBlueRows thead {
   background: #0b6fa4;
-  border-bottom: 5px solid #ffffff;
 }
 
 table.paleBlueRows thead th {
@@ -348,23 +347,18 @@ table.paleBlueRows thead th {
   font-weight: bold;
   color: #ffffff;
   text-align: center;
-  border-left: 2px solid #ffffff;
 }
 
 table.paleBlueRows thead th:first-child {
   border-left: none;
 }
 
-table.paleBlueRows tfoot {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333333;
-  background: #d0e4f5;
-  border-top: 3px solid #444444;
-}
-
 table.paleBlueRows tfoot td {
   font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: hsl(0, 0%, 0%);
+  width: 100%;
 }
 
 .about-container {
@@ -672,7 +666,7 @@ table.paleBlueRows tfoot td {
 
 .blogs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 2rem;
   margin-top: 3rem;
 }
@@ -687,11 +681,17 @@ table.paleBlueRows tfoot td {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
   transition: all 0.4s ease-in-out;
+  grid-column: span 2;
+  flex-grow: 2;
 }
 .blogs .blog:hover img {
   filter: grayscale(0);
   transform: scale(1.1);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+.blogs .blog:hover:not(:hover) {
+  grid-column: span 1;
+  flex-grow: 0.5;
 }
 .blogs .blog img {
   width: 100%;
@@ -839,6 +839,16 @@ table.paleBlueRows tfoot td {
 .btn-con {
   display: flex;
   align-self: flex-start;
+  border: solid 1px #000;
+  border-radius: 10px;
+  padding: 10px;
+}
+.btn-con:hover {
+  background: var(--color-gray4);
+  transition: all 0.4s ease-out;
+}
+.btn-con .btn-icon {
+  color: var(--color-secondary);
 }
 
 .sub-btn {
@@ -879,6 +889,7 @@ table.paleBlueRows tfoot td {
   margin: 0 0 40px 0;
   align-items: center;
   overflow: hidden;
+  max-width: 225px;
 }
 .main-btn .btn-text {
   display: flex;
@@ -966,16 +977,13 @@ table.paleBlueRows tfoot td {
     opacity: 1;
   }
 }
-.k {
+.Information {
   height: 300px;
 }
 
 @media screen and (max-width: 1432px) {
   header {
     padding: 0 !important;
-  }
-  .section {
-    padding: 7rem 11rem;
   }
   .contact-content-con {
     flex-direction: column;
@@ -1014,95 +1022,12 @@ table.paleBlueRows tfoot td {
   .main-title h2 .bg-text {
     font-size: 3rem;
   }
-  .earn,
-  .table-container {
+  .earn {
     -moz-columns: 3;
          columns: 3;
   }
 }
 @media screen and (max-width: 970px) {
-  header {
-    padding: 0;
-  }
-  header .right-header {
-    padding: 0 !important;
-  }
-  .theme-btn {
-    width: 50px;
-    height: 50px;
-  }
-  .header-content {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .left-header .h-shape {
-    display: none;
-  }
-  .right-header {
-    grid-row: 1;
-    width: 90%;
-    margin: 0 auto;
-  }
-  .right-header .name {
-    font-size: 2.5rem !important;
-  }
-  .header-content .left-header .image {
-    margin: 0 auto;
-    width: 90%;
-  }
-  .controlls {
-    top: auto;
-    bottom: 0;
-    flex-direction: row;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    background-color: var(--color-gray5);
-  }
-  .controlls .control {
-    margin: 0.6rem 1rem;
-  }
-  .section {
-    padding: 7rem 6rem;
-  }
-  .section {
-    padding: 7rem 3rem;
-  }
-  .about-stats .progress-bars {
-    grid-template-columns: 1fr;
-  }
-  .main-title h2 {
-    font-size: 3rem;
-  }
-  .main-title h2 span {
-    font-size: 3rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 3rem;
-  }
-  .table-container table,
-  .table-container table thead,
-  .table-container table tbody,
-  .table-container table th,
-  .table-container table td,
-  .table-container table tr {
-    display: block;
-  }
-  .table-container table thead tr {
-    display: none;
-  }
-  .table-container table tr {
-    border: 1px solid #ccc;
-  }
-  .table-container table td {
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 25%;
-  }
-}
-@media screen and (max-width: 600px) {
   .about-container {
     grid-template-columns: 1fr;
   }

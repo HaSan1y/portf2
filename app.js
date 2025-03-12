@@ -12,8 +12,8 @@ function PageTransitions() {
 	}
 
 	allsections.addEventListener("click", (e) => {
-		const ido = e.target.dataset.id;
-		if (ido) {
+		const idnodelist = e.target.dataset.id;
+		if (idnodelist) {
 			sectBtn.forEach((btn) => {
 				btn.classList.remove("active");
 			});
@@ -22,7 +22,7 @@ function PageTransitions() {
 			sections.forEach((section) => {
 				section.classList.remove("active");
 			});
-			const element = document.getElementById(ido);
+			const element = document.getElementById(idnodelist);
 			element.classList.add("active");
 		}
 	});
