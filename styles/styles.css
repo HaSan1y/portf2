@@ -81,46 +81,19 @@ section {
   left: 0;
   top: 0;
   z-index: -1;
-  padding: 2rem 18rem;
-}
-
-.section {
+  padding: 2rem 15rem;
   transform: translateY(-10%) scale(0);
   transform: translateX(-1%);
   transition: all 0.4s ease-in-out;
   background: var(--color-primary);
 }
 
-.sec1 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec2 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec3 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec4 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec5 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec6 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
+.sec1,
+.sec2,
+.sec3,
+.sec4,
+.sec5,
+.sec6,
 .sec7 {
   display: none;
   transform: translateY(0) scale(1);
@@ -310,7 +283,6 @@ td {
 }
 
 th {
-  background-color: hsl(0, 0%, 0%);
   color: var(--color-white);
 }
 
@@ -357,7 +329,7 @@ table.paleBlueRows tfoot td {
   font-size: 14px;
   font-weight: bold;
   color: white;
-  background: hsl(0, 0%, 0%);
+  background: hsla(0, 0%, 15%, 0.5);
   width: 100%;
 }
 
@@ -666,7 +638,7 @@ table.paleBlueRows tfoot td {
 
 .blogs {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
 }
@@ -681,17 +653,11 @@ table.paleBlueRows tfoot td {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
   transition: all 0.4s ease-in-out;
-  grid-column: span 2;
-  flex-grow: 2;
 }
 .blogs .blog:hover img {
   filter: grayscale(0);
   transform: scale(1.1);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
-}
-.blogs .blog:hover:not(:hover) {
-  grid-column: span 1;
-  flex-grow: 0.5;
 }
 .blogs .blog img {
   width: 100%;
@@ -856,7 +822,7 @@ table.paleBlueRows tfoot td {
   color: inherit;
   font-weight: 600;
   position: relative;
-  margin: 0 auto 20px auto;
+  margin: 20px auto;
   background: var(--color-gray2);
   border: 1px solid var(--color-secondary);
   display: flex;
@@ -981,6 +947,10 @@ table.paleBlueRows tfoot td {
   height: 300px;
 }
 
+form {
+  overflow: auto;
+}
+
 @media screen and (max-width: 1432px) {
   header {
     padding: 0 !important;
@@ -1041,25 +1011,20 @@ table.paleBlueRows tfoot td {
   .about-container .left-about p {
     padding-left: 0;
   }
+  .about-stats .progress-bars,
+  .blogs {
+    grid-template-columns: 1fr;
+    overflow: auto;
+  }
   .earn,
   .table-container {
     -moz-columns: 2;
          columns: 2;
   }
-  .timeline {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
+  .timeline,
   .portfolios {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
-  }
-  .blogs {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .section {
-    padding: 2rem 2.5rem !important;
   }
   .main-title h2 {
     font-size: 2rem;
@@ -1080,5 +1045,8 @@ table.paleBlueRows tfoot td {
     background: var(--color-gray5);
     color: var(--color-white);
     width: auto;
+  }
+  section {
+    padding: 0 1.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */
