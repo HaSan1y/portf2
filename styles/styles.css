@@ -36,7 +36,7 @@
 }
 
 body {
-  background: var(--color-primary) !important;
+  background: var(--color-primary);
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.2rem;
   transition: all 0.4s ease-in-out;
@@ -94,7 +94,8 @@ section {
 .sec4,
 .sec5,
 .sec6,
-.sec7 {
+.sec7,
+.sec8 {
   display: none;
   transform: translateY(0) scale(1);
 }
@@ -102,6 +103,10 @@ section {
 .sec7.active {
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.sec8.active {
+  height: 100%;
 }
 
 .active {
@@ -131,9 +136,6 @@ section {
 .controlls .active-btn {
   background: var(--color-secondary) !important;
   transition: all 0.4s ease-in-out;
-}
-.controlls .active-btn i {
-  color: var(--color-white) !important;
 }
 .controlls .control {
   padding: 1rem;
@@ -713,8 +715,7 @@ table.paleBlueRows tfoot td {
   justify-content: space-between;
 }
 .contact-content-con .left-contact .contact-info .contact-item p {
-  margin: 0.3rem 0 !important;
-  padding: 0 !important;
+  margin: 0.3rem 0;
   text-align: right;
   font-size: 1rem;
   letter-spacing: 0.5px;
@@ -778,6 +779,7 @@ table.paleBlueRows tfoot td {
   font-family: inherit;
   background: var(--color-gray5);
   color: var(--color-white);
+  resize: vertical;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 4;
@@ -1015,11 +1017,6 @@ form {
   .blogs {
     grid-template-columns: 1fr;
     overflow: auto;
-  }
-  .earn,
-  .table-container {
-    -moz-columns: 2;
-         columns: 2;
   }
   .timeline,
   .portfolios {
