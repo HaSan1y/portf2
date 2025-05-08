@@ -1,3 +1,9 @@
 {
-	"bitoAI.codeCompletion.enableAutoCompletion": false
+	"bitoAI.codeCompletion.enableAutoCompletion": false,
+	"[markdown]": {
+		"editor.suggestOnTriggerCharacters": false
+	},
+	"[json]": {
+		"editor.suggestOnTriggerCharacters": false
+	}
 }

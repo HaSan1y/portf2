@@ -256,17 +256,25 @@ section {
 
 table {
   border-collapse: collapse;
-  font-family: "roboto", Times, serif;
+  font-family: "Roboto Condensed", Times, serif;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
+  margin: auto;
+  color: #000000;
+  font-weight: bolder;
+  text-decoration: none;
+  font-style: oblique;
+  font-variant: small-caps;
+  text-transform: none;
 }
 
-caption {
+caption,
+.earn {
   text-align: left;
-  text-shadow: #007bff;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
   background-color: hsla(0, 0%, 0%, 0.5);
   color: white;
   font-size: 1.5rem;
@@ -291,8 +299,7 @@ th {
 td {
   text-overflow: ellipsis;
   overflow: hidden;
-  padding: 7px;
-  background-color: red;
+  background-color: rgba(0, 247, 255, 0.151);
   padding: 10px;
 }
 

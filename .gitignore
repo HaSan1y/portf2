@@ -1,9 +1,16 @@
 Portfolio.png
+
 styles/styles.scss
 /styles/_media.scss
 
-# !styles/styles.css
+Dockerfile
+doc.md
+.dockerignore
 
+.vscode
+.gitignore
+.gitattributes
+# !styles/styles.css
 
 # echo "styles/styles.scss" >> .gitignore
 # git rm --cached styles/styles.scss
