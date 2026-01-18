@@ -6,6 +6,7 @@ styles/styles.scss
 Dockerfile
 doc.md
 .dockerignore
+*.test.js
 
 .vscode
 .gitignore

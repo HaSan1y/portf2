@@ -95,7 +95,8 @@ section {
 .sec5,
 .sec6,
 .sec7,
-.sec8 {
+.sec8,
+.sec9 {
   display: none;
   transform: translateY(0) scale(1);
 }
@@ -105,8 +106,13 @@ section {
   height: fit-content;
 }
 
-.sec8.active {
+.sec8.active,
+.sec9.active {
   height: 100%;
+}
+
+.dip-text {
+  color: var(--color-black);
 }
 
 .active {
@@ -199,8 +205,7 @@ section {
   left: 0;
   top: 0;
   z-index: -1;
-  -webkit-clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
-          clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+  clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
